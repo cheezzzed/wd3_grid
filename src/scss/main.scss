@@ -100,7 +100,6 @@ body {
 		padding: 4rem 2rem;
 
 		.purchase{
-			text-align: left;
 
 			.quotes{
 				margin-bottom: 1.5rem;
@@ -132,6 +131,66 @@ body {
 	.verified-user-four{
 		background-color: variables.$hot-pink;
 		padding: 4rem 2rem;
+		color: variables.$white;
+
+		.net{
+
+			.v-user{
+				color: variables.$white;
+				opacity: 0.5;
+			}
+
+			.quotes{
+				margin-top: 1rem;
+				margin-bottom: 1.5rem;
+				font-family: 'Abril Fatface', cursive;
+				color: variables.$white;
+				font-size: 1.8rem;
+			}
+
+			.sub-quotes{
+				margin-bottom: 1rem;
+				opacity: 0.5;
+				line-height: 1.5rem;
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.verified-user-five{
+		padding: 4rem 2rem;
+
+		.business{
+
+			.quotes{
+				margin-bottom: 1.5rem;
+				font-family: 'Abril Fatface', cursive;
+				color: variables.$grey-blue;
+				font-size: 2.4rem;
+				line-height: 2.8rem;
+			}
+
+			.sub-quotes{
+				margin-bottom: 1rem;
+				color: variables.$grey-blue;
+				opacity: 0.7;
+				line-height: 2rem;
+				font-size: 1.45rem;
+			}
+
+			.paragraph{
+				margin-top: 1.25rem;
+			}
+
+			.user{
+				color: variables.$grey-blue;
+				text-align: left;
+			}
+
+			.v-user{
+				opacity: 0.7;
+			}
+		}
 	}
 }
 
