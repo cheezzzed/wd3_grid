@@ -37,8 +37,39 @@ body {
 	background: variables.$white;
 	font-family: sans-serif;
 
+	@include mixins.bp-large{
+		background: variables.$lavender;
+	}
+
+	.wrapper{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		@include mixins.bp-large{
+			// padding: 10.25rem;
+			grid-gap: 1.5rem;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: 1fr 1fr;
+			// grid-gap: 1.25rem;
+			grid-template-areas: 
+			"quotes quotes quotes content content content content content content lucila lucila lucila"
+			"user user user user user user verified verified verified lucila lucila lucila"
+			// "quotes content content"
+			// "user user verified";
+			
+		}
+	}
+
+	.verified-user{
+		grid-column: 1 / -1;
+	}
+
 	.verified-user-one{
 		padding: 4rem 2rem;
+
+		@include mixins.bp-large{
+			grid-area: quotes;
+		}
 
 		.amazing{
 
@@ -73,7 +104,15 @@ body {
 		padding: 2rem 2rem 4rem 2rem;
 		color: variables.$white;
 
+		@include mixins.bp-large{
+			grid-area: content;
+			border-radius: 5%;
+		}
+
 		.wonderful{
+			@include mixins.bp-large{
+				padding: 2rem;
+			}
 
 			.v-user{
 				color: variables.$grey-blue;
@@ -98,6 +137,10 @@ body {
 
 	.verified-user-three{
 		padding: 4rem 2rem;
+
+		@include mixins.bp-large{
+			grid-area: verified;
+		}
 
 		.purchase{
 
@@ -133,6 +176,11 @@ body {
 		padding: 4rem 2rem;
 		color: variables.$white;
 
+		@include mixins.bp-large{
+			grid-area: user;
+			border-radius: 5%;
+		}
+
 		.net{
 
 			.v-user{
@@ -159,6 +207,12 @@ body {
 
 	.verified-user-five{
 		padding: 4rem 2rem;
+
+		@include mixins.bp-large{
+			grid-area: lucila;
+			background: variables.$white;
+			border-radius: 5%;
+		}
 
 		.business{
 

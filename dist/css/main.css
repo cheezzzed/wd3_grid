@@ -168,8 +168,37 @@ body {
   background: #ffffff;
   font-family: sans-serif;
 }
+@media screen and (min-width: 992px) {
+  body {
+    background: #f7ecf8;
+  }
+}
+body .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (min-width: 992px) {
+  body .wrapper {
+    grid-gap: 1.5rem;
+    -ms-grid-columns: 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: 1fr 1.5rem 1fr;
+    grid-template-rows: 1fr 1fr;
+        grid-template-areas: "quotes quotes quotes content content content content content content lucila lucila lucila" "user user user user user user verified verified verified lucila lucila lucila";
+  }
+}
+body .verified-user {
+  grid-column: 1/-1;
+}
 body .verified-user-one {
   padding: 4rem 2rem;
+}
+@media screen and (min-width: 992px) {
+  body .verified-user-one {
+    grid-area: quotes;
+  }
 }
 body .verified-user-one .amazing .quotes {
   margin-bottom: 1.5rem;
@@ -196,6 +225,17 @@ body .verified-user-two {
   padding: 2rem 2rem 4rem 2rem;
   color: #ffffff;
 }
+@media screen and (min-width: 992px) {
+  body .verified-user-two {
+    grid-area: content;
+    border-radius: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .verified-user-two .wonderful {
+    padding: 2rem;
+  }
+}
 body .verified-user-two .wonderful .v-user {
   color: #48556a;
 }
@@ -214,6 +254,11 @@ body .verified-user-two .wonderful .sub-quotes {
 }
 body .verified-user-three {
   padding: 4rem 2rem;
+}
+@media screen and (min-width: 992px) {
+  body .verified-user-three {
+    grid-area: verified;
+  }
 }
 body .verified-user-three .purchase .quotes {
   margin-bottom: 1.5rem;
@@ -241,6 +286,12 @@ body .verified-user-four {
   padding: 4rem 2rem;
   color: #ffffff;
 }
+@media screen and (min-width: 992px) {
+  body .verified-user-four {
+    grid-area: user;
+    border-radius: 5%;
+  }
+}
 body .verified-user-four .net .v-user {
   color: #ffffff;
   opacity: 0.5;
@@ -260,6 +311,41 @@ body .verified-user-four .net .sub-quotes {
 }
 body .verified-user-five {
   padding: 4rem 2rem;
+}
+@media screen and (min-width: 992px) {
+  body .verified-user-five {
+    grid-area: lucila;
+    background: #ffffff;
+    border-radius: 5%;
+  }
+}
+@media screen and (min-width: 992px){
+  body .verified-user-one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  body .verified-user-two {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 11;
+  }
+  body .verified-user-three {
+    -ms-grid-row: 3;
+    -ms-grid-column: 13;
+    -ms-grid-column-span: 5;
+  }
+  body .verified-user-four {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 11;
+  }
+  body .verified-user-five {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 19;
+    -ms-grid-column-span: 5;
+  }
 }
 body .verified-user-five .business .quotes {
   margin-bottom: 1.5rem;
