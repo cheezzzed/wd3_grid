@@ -171,6 +171,7 @@ body {
 @media screen and (min-width: 992px) {
   body {
     background: #f7ecf8;
+    padding: 10rem 10.5rem 10rem 10.5rem;
   }
 }
 body .wrapper {
@@ -229,6 +230,7 @@ body .verified-user-two {
   body .verified-user-two {
     grid-area: content;
     border-radius: 5%;
+    margin: 1.5rem 2rem 1.5rem 2rem;
   }
 }
 @media screen and (min-width: 992px) {
