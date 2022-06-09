@@ -171,7 +171,6 @@ body {
 @media screen and (min-width: 992px) {
   body {
     background: #f7ecf8;
-    padding: 10rem 10.5rem 10rem 10.5rem;
   }
 }
 body .wrapper {
@@ -188,189 +187,332 @@ body .wrapper {
     -ms-grid-rows: 1fr 1.5rem 1fr;
     grid-template-rows: 1fr 1fr;
         grid-template-areas: "quotes quotes quotes content content content content content content lucila lucila lucila" "user user user user user user verified verified verified lucila lucila lucila";
+    padding: 10.25rem;
   }
 }
-body .verified-user {
+body .wrapper .verified-user {
   grid-column: 1/-1;
-}
-body .verified-user-one {
   padding: 4rem 2rem;
 }
+body .wrapper .verified-user .quote {
+  font-family: "Abril Fatface", cursive;
+  color: #48556a;
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+}
 @media screen and (min-width: 992px) {
-  body .verified-user-one {
+  body .wrapper .verified-user .quote {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+body .wrapper .verified-user .sub-quote {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .verified-user .sub-quote {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+body .wrapper .verified-user .paragraph {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+body .wrapper .verified-user .user {
+  color: #48556a;
+}
+body .wrapper .verified-user .user .v-user {
+  color: #48556a;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+body .wrapper .verified-user .user img {
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-one {
     grid-area: quotes;
   }
 }
-body .verified-user-one .amazing .quotes {
+body .wrapper .user-one .user {
+  text-align: right;
+}
+body .wrapper .user-two {
+  background-color: #19202d;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-two {
+    grid-area: content;
+    border-radius: 2rem;
+  }
+}
+body .wrapper .user-two .quote {
+  color: #ffffff;
+}
+body .wrapper .user-two .sub-quote {
+  color: #48556a;
+  opacity: 1;
+}
+body .wrapper .user-two .user {
+  color: #ffffff;
+  order: 1;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-three {
+    grid-area: verified;
+  }
+}
+body .wrapper .user-three .user {
+  text-align: right;
+}
+body .wrapper .user-four {
+  background-color: #cb1e7b;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-four {
+    grid-area: user;
+    border-radius: 2rem;
+  }
+}
+body .wrapper .user-four .quote {
+  color: #ffffff;
+}
+body .wrapper .user-four .user {
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-five {
+    grid-area: lucila;
+    background-color: #ffffff;
+    border-radius: 2rem;
+  }
+}
+body .wrapper .user-five .user {
+  text-align: right;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .verified-user-one {
+    grid-area: quotes;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .verified-user-one .amazing {
+    padding: 2rem 1.5rem 1rem 1.5rem;
+  }
+}
+body .wrapper .verified-user-one .amazing .quotes {
   margin-bottom: 1.5rem;
-  font-family: "Abril Fatface", cursive;
   color: #48556a;
   font-size: 2.4rem;
 }
-body .verified-user-one .amazing .sub-quotes {
+@media screen and (min-width: 992px) {
+  body .wrapper .verified-user-one .amazing .quotes {
+    font-size: 1.5rem;
+  }
+}
+body .wrapper .verified-user-one .amazing .sub-quotes {
   margin-bottom: 1rem;
   color: #48556a;
   opacity: 0.7;
   line-height: 2rem;
   font-size: 1.4rem;
 }
-body .verified-user-one .amazing .user {
+@media screen and (min-width: 992px) {
+  body .wrapper .verified-user-one .amazing .sub-quotes {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+body .wrapper .verified-user-one .amazing .user {
   color: #48556a;
   text-align: right;
 }
-body .verified-user-one .amazing .v-user {
+body .wrapper .verified-user-one .amazing .v-user {
   opacity: 0.7;
 }
-body .verified-user-two {
+body .wrapper .verified-user-two {
   background-color: #19202d;
   padding: 2rem 2rem 4rem 2rem;
   color: #ffffff;
 }
 @media screen and (min-width: 992px) {
-  body .verified-user-two {
+  body .wrapper .verified-user-two {
     grid-area: content;
     border-radius: 5%;
-    margin: 1.5rem 2rem 1.5rem 2rem;
+    margin: 1rem 1.5rem 1rem 1.5rem;
   }
 }
-@media screen and (min-width: 992px) {
-  body .verified-user-two .wonderful {
-    padding: 2rem;
-  }
-}
-body .verified-user-two .wonderful .v-user {
+body .wrapper .verified-user-two .wonderful .v-user {
   color: #48556a;
 }
-body .verified-user-two .wonderful .quotes {
+body .wrapper .verified-user-two .wonderful .quotes {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-family: "Abril Fatface", cursive;
   color: #ffffff;
   font-size: 2rem;
 }
-body .verified-user-two .wonderful .sub-quotes {
+@media screen and (min-width: 992px) {
+  body .wrapper .verified-user-two .wonderful .quotes {
+    font-size: 1.5rem;
+  }
+}
+body .wrapper .verified-user-two .wonderful .sub-quotes {
   margin-bottom: 1rem;
   opacity: 0.5;
   line-height: 1.5rem;
   font-size: 1.2rem;
 }
-body .verified-user-three {
+body .wrapper .verified-user-three {
   padding: 4rem 2rem;
 }
 @media screen and (min-width: 992px) {
-  body .verified-user-three {
+  body .wrapper .verified-user-three {
     grid-area: verified;
   }
 }
-body .verified-user-three .purchase .quotes {
+body .wrapper .verified-user-three .purchase .quotes {
   margin-bottom: 1.5rem;
   font-family: "Abril Fatface", cursive;
   color: #48556a;
   font-size: 2.4rem;
   line-height: 2.8rem;
 }
-body .verified-user-three .purchase .sub-quotes {
+body .wrapper .verified-user-three .purchase .sub-quotes {
   margin-bottom: 1rem;
   color: #48556a;
   opacity: 0.7;
   line-height: 2rem;
   font-size: 1.45rem;
 }
-body .verified-user-three .purchase .user {
+body .wrapper .verified-user-three .purchase .user {
   color: #48556a;
   text-align: right;
 }
-body .verified-user-three .purchase .v-user {
+body .wrapper .verified-user-three .purchase .v-user {
   opacity: 0.7;
 }
-body .verified-user-four {
+body .wrapper .verified-user-four {
   background-color: #cb1e7b;
   padding: 4rem 2rem;
   color: #ffffff;
 }
 @media screen and (min-width: 992px) {
-  body .verified-user-four {
+  body .wrapper .verified-user-four {
     grid-area: user;
     border-radius: 5%;
   }
 }
-body .verified-user-four .net .v-user {
+body .wrapper .verified-user-four .net .v-user {
   color: #ffffff;
   opacity: 0.5;
 }
-body .verified-user-four .net .quotes {
+body .wrapper .verified-user-four .net .quotes {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-family: "Abril Fatface", cursive;
   color: #ffffff;
   font-size: 1.8rem;
 }
-body .verified-user-four .net .sub-quotes {
+body .wrapper .verified-user-four .net .sub-quotes {
   margin-bottom: 1rem;
   opacity: 0.5;
   line-height: 1.5rem;
   font-size: 1.2rem;
 }
-body .verified-user-five {
+body .wrapper .verified-user-five {
   padding: 4rem 2rem;
 }
 @media screen and (min-width: 992px) {
-  body .verified-user-five {
+  body .wrapper .verified-user-five {
     grid-area: lucila;
     background: #ffffff;
     border-radius: 5%;
   }
 }
 @media screen and (min-width: 992px){
-  body .verified-user-one {
+  body .wrapper .user-one {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
   }
-  body .verified-user-two {
+  body .wrapper .user-two {
     -ms-grid-row: 1;
     -ms-grid-column: 7;
     -ms-grid-column-span: 11;
   }
-  body .verified-user-three {
+  body .wrapper .user-three {
     -ms-grid-row: 3;
     -ms-grid-column: 13;
     -ms-grid-column-span: 5;
   }
-  body .verified-user-four {
+  body .wrapper .user-four {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 11;
   }
-  body .verified-user-five {
+  body .wrapper .user-five {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 19;
+    -ms-grid-column-span: 5;
+  }
+  body .wrapper .verified-user-one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  body .wrapper .verified-user-two {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 11;
+  }
+  body .wrapper .verified-user-three {
+    -ms-grid-row: 3;
+    -ms-grid-column: 13;
+    -ms-grid-column-span: 5;
+  }
+  body .wrapper .verified-user-four {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 11;
+  }
+  body .wrapper .verified-user-five {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 19;
     -ms-grid-column-span: 5;
   }
 }
-body .verified-user-five .business .quotes {
+body .wrapper .verified-user-five .business .quotes {
   margin-bottom: 1.5rem;
   font-family: "Abril Fatface", cursive;
   color: #48556a;
   font-size: 2.4rem;
   line-height: 2.8rem;
 }
-body .verified-user-five .business .sub-quotes {
+body .wrapper .verified-user-five .business .sub-quotes {
   margin-bottom: 1rem;
   color: #48556a;
   opacity: 0.7;
   line-height: 2rem;
   font-size: 1.45rem;
 }
-body .verified-user-five .business .paragraph {
+body .wrapper .verified-user-five .business .paragraph {
   margin-top: 1.25rem;
 }
-body .verified-user-five .business .user {
+body .wrapper .verified-user-five .business .user {
   color: #48556a;
   text-align: left;
 }
-body .verified-user-five .business .v-user {
+body .wrapper .verified-user-five .business .v-user {
   opacity: 0.7;
 }
 /*# sourceMappingURL=main.css.map */

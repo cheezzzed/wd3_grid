@@ -39,7 +39,6 @@ body {
 
 	@include mixins.bp-large{
 		background: variables.$lavender;
-		padding: 10rem 10.5rem 10rem 10.5rem;
 	}
 
 	.wrapper{
@@ -54,199 +53,343 @@ body {
 			// grid-gap: 1.25rem;
 			grid-template-areas: 
 			"quotes quotes quotes content content content content content content lucila lucila lucila"
-			"user user user user user user verified verified verified lucila lucila lucila"
+			"user user user user user user verified verified verified lucila lucila lucila";
+			padding: 10.25rem;
 			// "quotes content content"
 			// "user user verified";
 			
 		}
-	}
 
-	.verified-user{
-		grid-column: 1 / -1;
-	}
+		.verified-user{
+			grid-column: 1 / -1;
+			padding: 4rem 2rem;
 
-	.verified-user-one{
-		padding: 4rem 2rem;
-
-		@include mixins.bp-large{
-			grid-area: quotes;
-		}
-
-		.amazing{
-
-			.quotes{
-				margin-bottom: 1.5rem;
+			.quote{
 				font-family: 'Abril Fatface', cursive;
 				color: variables.$grey-blue;
+				margin-bottom: 1.5rem;
 				font-size: 2.4rem;
+				line-height: 2.5rem;
+
+				@include mixins.bp-large{
+					font-size: 1.25rem;
+					line-height: 1;
+				}
 			}
 
-			.sub-quotes{
+			.sub-quote{
 				margin-bottom: 1rem;
-				color: variables.$grey-blue;
-				opacity: 0.7;
+				opacity: 0.5;
+				line-height: 2rem;
+				font-size: 1.4rem;
+
+				@include mixins.bp-large{
+					font-size: 1rem;
+					line-height: 1.2rem;
+				}
+			}
+
+			.paragraph{
+				margin-bottom: 1rem;
+				opacity: 0.5;
 				line-height: 2rem;
 				font-size: 1.4rem;
 			}
 
 			.user{
 				color: variables.$grey-blue;
-				text-align: right;
-			}
 
-			.v-user{
-				opacity: 0.7;
+				.v-user{
+					color: variables.$grey-blue;
+					opacity: 0.7;
+					margin-top: 0.5rem;
+				}
+
+				img{
+					margin-top: 0.5rem;
+				}
 			}
 		}
-	}
 
-	.verified-user-two{
-		background-color: variables.$dark-blue;
-		padding: 2rem 2rem 4rem 2rem;
-		color: variables.$white;
+		.user-one{
 
-		@include mixins.bp-large{
-			grid-area: content;
-			border-radius: 5%;
-			margin: 1.5rem 2rem 1.5rem 2rem;
-		}
-
-		.wonderful{
 			@include mixins.bp-large{
-				padding: 2rem;
-			}
-
-			.v-user{
-				color: variables.$grey-blue;
-			}
-
-			.quotes{
-				margin-top: 1rem;
-				margin-bottom: 1.5rem;
-				font-family: 'Abril Fatface', cursive;
-				color: variables.$white;
-				font-size: 2rem;
-			}
-
-			.sub-quotes{
-				margin-bottom: 1rem;
-				opacity: 0.5;
-				line-height: 1.5rem;
-				font-size: 1.2rem;
-			}
-		}
-	}
-
-	.verified-user-three{
-		padding: 4rem 2rem;
-
-		@include mixins.bp-large{
-			grid-area: verified;
-		}
-
-		.purchase{
-
-			.quotes{
-				margin-bottom: 1.5rem;
-				font-family: 'Abril Fatface', cursive;
-				color: variables.$grey-blue;
-				font-size: 2.4rem;
-				line-height: 2.8rem;
-			}
-
-			.sub-quotes{
-				margin-bottom: 1rem;
-				color: variables.$grey-blue;
-				opacity: 0.7;
-				line-height: 2rem;
-				font-size: 1.45rem;
+				grid-area: quotes;
 			}
 
 			.user{
-				color: variables.$grey-blue;
 				text-align: right;
 			}
 
-			.v-user{
-				opacity: 0.7;
+		}
+
+		.user-two{
+			background-color: variables.$dark-blue;
+
+			@include mixins.bp-large{
+				grid-area: content;
+				border-radius: 2rem;
 			}
-		}
-	}
 
-	.verified-user-four{
-		background-color: variables.$hot-pink;
-		padding: 4rem 2rem;
-		color: variables.$white;
-
-		@include mixins.bp-large{
-			grid-area: user;
-			border-radius: 5%;
-		}
-
-		.net{
-
-			.v-user{
+			.quote{
 				color: variables.$white;
-				opacity: 0.5;
 			}
 
-			.quotes{
-				margin-top: 1rem;
-				margin-bottom: 1.5rem;
-				font-family: 'Abril Fatface', cursive;
-				color: variables.$white;
-				font-size: 1.8rem;
-			}
-
-			.sub-quotes{
-				margin-bottom: 1rem;
-				opacity: 0.5;
-				line-height: 1.5rem;
-				font-size: 1.2rem;
-			}
-		}
-	}
-
-	.verified-user-five{
-		padding: 4rem 2rem;
-
-		@include mixins.bp-large{
-			grid-area: lucila;
-			background: variables.$white;
-			border-radius: 5%;
-		}
-
-		.business{
-
-			.quotes{
-				margin-bottom: 1.5rem;
-				font-family: 'Abril Fatface', cursive;
+			.sub-quote{
 				color: variables.$grey-blue;
-				font-size: 2.4rem;
-				line-height: 2.8rem;
-			}
-
-			.sub-quotes{
-				margin-bottom: 1rem;
-				color: variables.$grey-blue;
-				opacity: 0.7;
-				line-height: 2rem;
-				font-size: 1.45rem;
-			}
-
-			.paragraph{
-				margin-top: 1.25rem;
+				opacity: 1;
 			}
 
 			.user{
-				color: variables.$grey-blue;
-				text-align: left;
+				color: variables.$white;
+				order: 1;
+			}
+		}
+
+		.user-three{
+
+			@include mixins.bp-large{
+				grid-area: verified;
 			}
 
-			.v-user{
-				opacity: 0.7;
+			.user{
+				text-align: right;
+			}
+		}
+
+		.user-four{
+			background-color: variables.$hot-pink;
+
+			@include mixins.bp-large{
+				grid-area: user;
+				border-radius: 2rem;
+			}
+
+			.quote{
+				color: variables.$white;
+			}
+
+			.user{
+				color: variables.$white;
+			}
+		}
+
+		.user-five{
+
+			@include mixins.bp-large{
+				grid-area: lucila;
+				background-color: variables.$white;
+				border-radius: 2rem;
+			}
+
+			.user{
+				text-align: right;
+			}
+		}
+
+		.verified-user-one{
+			
+
+			@include mixins.bp-large{
+				grid-area: quotes;
+			}
+
+			.amazing{
+
+				@include mixins.bp-large{
+					padding: 2rem 1.5rem 1rem 1.5rem;
+				}
+
+				.quotes{
+					margin-bottom: 1.5rem;
+					
+					color: variables.$grey-blue;
+					font-size: 2.4rem;
+
+					@include mixins.bp-large{
+						font-size: 1.5rem;
+					}
+					
+				}
+
+				.sub-quotes{
+					margin-bottom: 1rem;
+					color: variables.$grey-blue;
+					opacity: 0.7;
+					line-height: 2rem;
+					font-size: 1.4rem;
+
+					@include mixins.bp-large{
+						font-size: 1rem;
+						line-height: 1.2rem;
+					}
+				}
+
+				.user{
+					color: variables.$grey-blue;
+					text-align: right;
+				}
+
+				.v-user{
+					opacity: 0.7;
+				}
+			}
+		}
+
+		.verified-user-two{
+			background-color: variables.$dark-blue;
+			padding: 2rem 2rem 4rem 2rem;
+			color: variables.$white;
+
+			@include mixins.bp-large{
+				grid-area: content;
+				border-radius: 5%;
+				margin: 1rem 1.5rem 1rem 1.5rem;
+			}
+
+			.wonderful{
+				@include mixins.bp-large{
+					
+				}
+
+				.v-user{
+					color: variables.$grey-blue;
+				}
+
+				.quotes{
+					margin-top: 1rem;
+					margin-bottom: 1.5rem;
+					font-family: 'Abril Fatface', cursive;
+					color: variables.$white;
+					font-size: 2rem;
+
+					@include mixins.bp-large{
+						font-size: 1.5rem;
+					}
+				}
+
+				.sub-quotes{
+					margin-bottom: 1rem;
+					opacity: 0.5;
+					line-height: 1.5rem;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.verified-user-three{
+			padding: 4rem 2rem;
+
+			@include mixins.bp-large{
+				grid-area: verified;
+			}
+
+			.purchase{
+
+				.quotes{
+					margin-bottom: 1.5rem;
+					font-family: 'Abril Fatface', cursive;
+					color: variables.$grey-blue;
+					font-size: 2.4rem;
+					line-height: 2.8rem;
+				}
+
+				.sub-quotes{
+					margin-bottom: 1rem;
+					color: variables.$grey-blue;
+					opacity: 0.7;
+					line-height: 2rem;
+					font-size: 1.45rem;
+				}
+
+				.user{
+					color: variables.$grey-blue;
+					text-align: right;
+				}
+
+				.v-user{
+					opacity: 0.7;
+				}
+			}
+		}
+
+		.verified-user-four{
+			background-color: variables.$hot-pink;
+			padding: 4rem 2rem;
+			color: variables.$white;
+
+			@include mixins.bp-large{
+				grid-area: user;
+				border-radius: 5%;
+			}
+
+			.net{
+
+				.v-user{
+					color: variables.$white;
+					opacity: 0.5;
+				}
+
+				.quotes{
+					margin-top: 1rem;
+					margin-bottom: 1.5rem;
+					font-family: 'Abril Fatface', cursive;
+					color: variables.$white;
+					font-size: 1.8rem;
+				}
+
+				.sub-quotes{
+					margin-bottom: 1rem;
+					opacity: 0.5;
+					line-height: 1.5rem;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.verified-user-five{
+			padding: 4rem 2rem;
+
+			@include mixins.bp-large{
+				grid-area: lucila;
+				background: variables.$white;
+				border-radius: 5%;
+			}
+
+			.business{
+
+				.quotes{
+					margin-bottom: 1.5rem;
+					font-family: 'Abril Fatface', cursive;
+					color: variables.$grey-blue;
+					font-size: 2.4rem;
+					line-height: 2.8rem;
+				}
+
+				.sub-quotes{
+					margin-bottom: 1rem;
+					color: variables.$grey-blue;
+					opacity: 0.7;
+					line-height: 2rem;
+					font-size: 1.45rem;
+				}
+
+				.paragraph{
+					margin-top: 1.25rem;
+				}
+
+				.user{
+					color: variables.$grey-blue;
+					text-align: left;
+				}
+
+				.v-user{
+					opacity: 0.7;
+				}
 			}
 		}
 	}
+
+	
 }
 
