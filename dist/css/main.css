@@ -245,6 +245,7 @@ body .wrapper .verified-user .user {
   }
   body .wrapper .verified-user .user .v-user {
     grid-area: user;
+    margin-top: -1rem;
   }
   body .wrapper .verified-user .user .verified-img {
     grid-area: picture;
@@ -253,7 +254,6 @@ body .wrapper .verified-user .user {
 body .wrapper .verified-user .user .v-user {
   color: #48556a;
   opacity: 0.7;
-  margin-top: 0.5rem;
 }
 body .wrapper .verified-user .user img {
   margin-top: 0.5rem;
@@ -265,6 +265,11 @@ body .wrapper .verified-user .user img {
 }
 body .wrapper .user-one .user {
   text-align: right;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-one .user .v-user {
+    margin-top: -0.5rem;
+  }
 }
 body .wrapper .user-two {
   background-color: #19202d;
@@ -286,12 +291,27 @@ body .wrapper .user-two .user {
   color: #ffffff;
 }
 @media screen and (min-width: 992px) {
+  body .wrapper .user-two .user .v-user {
+    margin-top: -0.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-two .jessi {
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
   body .wrapper .user-three {
     grid-area: verified;
   }
 }
 body .wrapper .user-three .user {
   text-align: right;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-three .user .v-user {
+    margin-top: -0.1rem;
+  }
 }
 body .wrapper .user-four {
   background-color: #cb1e7b;
@@ -307,6 +327,11 @@ body .wrapper .user-four .quote {
 }
 body .wrapper .user-four .user {
   color: #ffffff;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-four .user .v-user {
+    margin-top: -0.3rem;
+  }
 }
 @media screen and (min-width: 992px) {
   body .wrapper .user-five {
@@ -373,5 +398,10 @@ body .wrapper .user-four .user {
 body .wrapper .user-five .user {
   text-align: right;
   order: 3;
+}
+@media screen and (min-width: 992px) {
+  body .wrapper .user-five .user .v-user {
+    margin-top: -0.7rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

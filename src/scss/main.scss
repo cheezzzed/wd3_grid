@@ -116,6 +116,7 @@ body {
 
 					.v-user{
 						grid-area: user;
+						margin-top: -1rem;
 					}
 
 					.verified-img{
@@ -126,7 +127,6 @@ body {
 				.v-user{
 					color: variables.$grey-blue;
 					opacity: 0.7;
-					margin-top: 0.5rem;
 				}
 
 				img{
@@ -143,6 +143,12 @@ body {
 
 			.user{
 				text-align: right;
+
+				.v-user{
+					@include mixins.bp-large{
+						margin-top: -0.5rem;
+					}
+				}
 			}
 
 		}
@@ -166,6 +172,19 @@ body {
 
 			.user{
 				color: variables.$white;
+
+				.v-user{
+					@include mixins.bp-large{
+						margin-top: -0.3rem;
+					}
+				}
+				
+			}
+
+			.jessi{
+				@include mixins.bp-large{
+					margin-right: 1rem;
+				}
 			}
 		}
 
@@ -177,6 +196,12 @@ body {
 
 			.user{
 				text-align: right;
+
+				.v-user{
+					@include mixins.bp-large{
+						margin-top: -0.1rem;
+					}
+				}
 			}
 		}
 
@@ -194,6 +219,12 @@ body {
 
 			.user{
 				color: variables.$white;
+
+				.v-user{
+					@include mixins.bp-large{
+						margin-top: -0.3rem;
+					}
+				}
 			}
 		}
 
@@ -212,6 +243,12 @@ body {
 			.user{
 				text-align: right;
 				order: 3;
+
+				.v-user{
+					@include mixins.bp-large{
+						margin-top: -0.7rem;
+					}
+				}
 			}
 		}
 
