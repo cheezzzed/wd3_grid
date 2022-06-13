@@ -61,8 +61,11 @@ body {
 		}
 
 		.verified-user{
+			display: grid;
 			grid-column: 1 / -1;
 			padding: 4rem 2rem;
+
+			
 
 			.quote{
 				font-family: 'Abril Fatface', cursive;
@@ -98,6 +101,27 @@ body {
 
 			.user{
 				color: variables.$grey-blue;
+
+				@include mixins.bp-large{
+					display: grid;
+					grid-template-columns: 2fr 1fr;
+					grid-template-rows: 1fr 1fr;
+					grid-template-areas: 
+					"name picture"
+					"user picture";
+
+					.name{
+						grid-area: name;
+					}
+
+					.v-user{
+						grid-area: user;
+					}
+
+					.verified-img{
+						grid-area: picture;
+					}
+				}
 
 				.v-user{
 					color: variables.$grey-blue;
@@ -142,7 +166,6 @@ body {
 
 			.user{
 				color: variables.$white;
-				order: 1;
 			}
 		}
 
@@ -180,214 +203,219 @@ body {
 				grid-area: lucila;
 				background-color: variables.$white;
 				border-radius: 2rem;
+
+				.user{
+					order: 1;
+				}
 			}
 
 			.user{
 				text-align: right;
+				order: 3;
 			}
 		}
 
-		.verified-user-one{
+		// .verified-user-one{
 			
 
-			@include mixins.bp-large{
-				grid-area: quotes;
-			}
+		// 	@include mixins.bp-large{
+		// 		grid-area: quotes;
+		// 	}
 
-			.amazing{
+		// 	.amazing{
 
-				@include mixins.bp-large{
-					padding: 2rem 1.5rem 1rem 1.5rem;
-				}
+		// 		@include mixins.bp-large{
+		// 			padding: 2rem 1.5rem 1rem 1.5rem;
+		// 		}
 
-				.quotes{
-					margin-bottom: 1.5rem;
+		// 		.quotes{
+		// 			margin-bottom: 1.5rem;
 					
-					color: variables.$grey-blue;
-					font-size: 2.4rem;
+		// 			color: variables.$grey-blue;
+		// 			font-size: 2.4rem;
 
-					@include mixins.bp-large{
-						font-size: 1.5rem;
-					}
+		// 			@include mixins.bp-large{
+		// 				font-size: 1.5rem;
+		// 			}
 					
-				}
+		// 		}
 
-				.sub-quotes{
-					margin-bottom: 1rem;
-					color: variables.$grey-blue;
-					opacity: 0.7;
-					line-height: 2rem;
-					font-size: 1.4rem;
+		// 		.sub-quotes{
+		// 			margin-bottom: 1rem;
+		// 			color: variables.$grey-blue;
+		// 			opacity: 0.7;
+		// 			line-height: 2rem;
+		// 			font-size: 1.4rem;
 
-					@include mixins.bp-large{
-						font-size: 1rem;
-						line-height: 1.2rem;
-					}
-				}
+		// 			@include mixins.bp-large{
+		// 				font-size: 1rem;
+		// 				line-height: 1.2rem;
+		// 			}
+		// 		}
 
-				.user{
-					color: variables.$grey-blue;
-					text-align: right;
-				}
+		// 		.user{
+		// 			color: variables.$grey-blue;
+		// 			text-align: right;
+		// 		}
 
-				.v-user{
-					opacity: 0.7;
-				}
-			}
-		}
+		// 		.v-user{
+		// 			opacity: 0.7;
+		// 		}
+		// 	}
+		// }
 
-		.verified-user-two{
-			background-color: variables.$dark-blue;
-			padding: 2rem 2rem 4rem 2rem;
-			color: variables.$white;
+		// .verified-user-two{
+		// 	background-color: variables.$dark-blue;
+		// 	padding: 2rem 2rem 4rem 2rem;
+		// 	color: variables.$white;
 
-			@include mixins.bp-large{
-				grid-area: content;
-				border-radius: 5%;
-				margin: 1rem 1.5rem 1rem 1.5rem;
-			}
+		// 	@include mixins.bp-large{
+		// 		grid-area: content;
+		// 		border-radius: 5%;
+		// 		margin: 1rem 1.5rem 1rem 1.5rem;
+		// 	}
 
-			.wonderful{
-				@include mixins.bp-large{
+		// 	.wonderful{
+		// 		@include mixins.bp-large{
 					
-				}
+		// 		}
 
-				.v-user{
-					color: variables.$grey-blue;
-				}
+		// 		.v-user{
+		// 			color: variables.$grey-blue;
+		// 		}
 
-				.quotes{
-					margin-top: 1rem;
-					margin-bottom: 1.5rem;
-					font-family: 'Abril Fatface', cursive;
-					color: variables.$white;
-					font-size: 2rem;
+		// 		.quotes{
+		// 			margin-top: 1rem;
+		// 			margin-bottom: 1.5rem;
+		// 			font-family: 'Abril Fatface', cursive;
+		// 			color: variables.$white;
+		// 			font-size: 2rem;
 
-					@include mixins.bp-large{
-						font-size: 1.5rem;
-					}
-				}
+		// 			@include mixins.bp-large{
+		// 				font-size: 1.5rem;
+		// 			}
+		// 		}
 
-				.sub-quotes{
-					margin-bottom: 1rem;
-					opacity: 0.5;
-					line-height: 1.5rem;
-					font-size: 1.2rem;
-				}
-			}
-		}
+		// 		.sub-quotes{
+		// 			margin-bottom: 1rem;
+		// 			opacity: 0.5;
+		// 			line-height: 1.5rem;
+		// 			font-size: 1.2rem;
+		// 		}
+		// 	}
+		// }
 
-		.verified-user-three{
-			padding: 4rem 2rem;
+		// .verified-user-three{
+		// 	padding: 4rem 2rem;
 
-			@include mixins.bp-large{
-				grid-area: verified;
-			}
+		// 	@include mixins.bp-large{
+		// 		grid-area: verified;
+		// 	}
 
-			.purchase{
+		// 	.purchase{
 
-				.quotes{
-					margin-bottom: 1.5rem;
-					font-family: 'Abril Fatface', cursive;
-					color: variables.$grey-blue;
-					font-size: 2.4rem;
-					line-height: 2.8rem;
-				}
+		// 		.quotes{
+		// 			margin-bottom: 1.5rem;
+		// 			font-family: 'Abril Fatface', cursive;
+		// 			color: variables.$grey-blue;
+		// 			font-size: 2.4rem;
+		// 			line-height: 2.8rem;
+		// 		}
 
-				.sub-quotes{
-					margin-bottom: 1rem;
-					color: variables.$grey-blue;
-					opacity: 0.7;
-					line-height: 2rem;
-					font-size: 1.45rem;
-				}
+		// 		.sub-quotes{
+		// 			margin-bottom: 1rem;
+		// 			color: variables.$grey-blue;
+		// 			opacity: 0.7;
+		// 			line-height: 2rem;
+		// 			font-size: 1.45rem;
+		// 		}
 
-				.user{
-					color: variables.$grey-blue;
-					text-align: right;
-				}
+		// 		.user{
+		// 			color: variables.$grey-blue;
+		// 			text-align: right;
+		// 		}
 
-				.v-user{
-					opacity: 0.7;
-				}
-			}
-		}
+		// 		.v-user{
+		// 			opacity: 0.7;
+		// 		}
+		// 	}
+		// }
 
-		.verified-user-four{
-			background-color: variables.$hot-pink;
-			padding: 4rem 2rem;
-			color: variables.$white;
+		// .verified-user-four{
+		// 	background-color: variables.$hot-pink;
+		// 	padding: 4rem 2rem;
+		// 	color: variables.$white;
 
-			@include mixins.bp-large{
-				grid-area: user;
-				border-radius: 5%;
-			}
+		// 	@include mixins.bp-large{
+		// 		grid-area: user;
+		// 		border-radius: 5%;
+		// 	}
 
-			.net{
+		// 	.net{
 
-				.v-user{
-					color: variables.$white;
-					opacity: 0.5;
-				}
+		// 		.v-user{
+		// 			color: variables.$white;
+		// 			opacity: 0.5;
+		// 		}
 
-				.quotes{
-					margin-top: 1rem;
-					margin-bottom: 1.5rem;
-					font-family: 'Abril Fatface', cursive;
-					color: variables.$white;
-					font-size: 1.8rem;
-				}
+		// 		.quotes{
+		// 			margin-top: 1rem;
+		// 			margin-bottom: 1.5rem;
+		// 			font-family: 'Abril Fatface', cursive;
+		// 			color: variables.$white;
+		// 			font-size: 1.8rem;
+		// 		}
 
-				.sub-quotes{
-					margin-bottom: 1rem;
-					opacity: 0.5;
-					line-height: 1.5rem;
-					font-size: 1.2rem;
-				}
-			}
-		}
+		// 		.sub-quotes{
+		// 			margin-bottom: 1rem;
+		// 			opacity: 0.5;
+		// 			line-height: 1.5rem;
+		// 			font-size: 1.2rem;
+		// 		}
+		// 	}
+		// }
 
-		.verified-user-five{
-			padding: 4rem 2rem;
+		// .verified-user-five{
+		// 	padding: 4rem 2rem;
 
-			@include mixins.bp-large{
-				grid-area: lucila;
-				background: variables.$white;
-				border-radius: 5%;
-			}
+		// 	@include mixins.bp-large{
+		// 		grid-area: lucila;
+		// 		background: variables.$white;
+		// 		border-radius: 5%;
+		// 	}
 
-			.business{
+		// 	.business{
 
-				.quotes{
-					margin-bottom: 1.5rem;
-					font-family: 'Abril Fatface', cursive;
-					color: variables.$grey-blue;
-					font-size: 2.4rem;
-					line-height: 2.8rem;
-				}
+		// 		.quotes{
+		// 			margin-bottom: 1.5rem;
+		// 			font-family: 'Abril Fatface', cursive;
+		// 			color: variables.$grey-blue;
+		// 			font-size: 2.4rem;
+		// 			line-height: 2.8rem;
+		// 		}
 
-				.sub-quotes{
-					margin-bottom: 1rem;
-					color: variables.$grey-blue;
-					opacity: 0.7;
-					line-height: 2rem;
-					font-size: 1.45rem;
-				}
+		// 		.sub-quotes{
+		// 			margin-bottom: 1rem;
+		// 			color: variables.$grey-blue;
+		// 			opacity: 0.7;
+		// 			line-height: 2rem;
+		// 			font-size: 1.45rem;
+		// 		}
 
-				.paragraph{
-					margin-top: 1.25rem;
-				}
+		// 		.paragraph{
+		// 			margin-top: 1.25rem;
+		// 		}
 
-				.user{
-					color: variables.$grey-blue;
-					text-align: left;
-				}
+		// 		.user{
+		// 			color: variables.$grey-blue;
+		// 			text-align: left;
+		// 		}
 
-				.v-user{
-					opacity: 0.7;
-				}
-			}
-		}
+		// 		.v-user{
+		// 			opacity: 0.7;
+		// 		}
+		// 	}
+		// }
 	}
 
 	

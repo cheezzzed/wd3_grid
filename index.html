@@ -10,41 +10,6 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/main.css" />
-
-		<!--
-			Do I work in src or dist? Good question.
-
-			First of all, if you're a newbie and you don't want to worry about any of this
-			Prepros or Gulp stuff, or scss, or browser-syncing, just do everything in dist.
-			In fact, just delete the src folder.
-
-			If you're a geek and want to get into it, here's some background...
-
-			Prepros and Gulp do mostly the same things. Prepros is a GUI (it's pretty),
-			Gulp is a CLI (it's in the terminal, and it's ugly).
-
-			Both will watch your files, and where appropriate, they will error-check and
-			compile them from one format to another. To stay organized, we have to
-			split things up between the files we write: the *source* files in "src";
-			and the files they become: the files that get *distributed* on the web, in "dist".
-
-			So src/scss files become dist/css files,
-			And src/js files become dist/js files (that have been compiled down to ES5),
-			And src/img files become dist/img files (that have been compressed for you).
-
-			Anything that doesn't need compiling/compressing/error-checking (plugins, video, fonts, etc),
-			just put straight in *dist*.
-
-			One way to remember it is: you're only going to distribute *dist*. You keep the source files
-			to yourself, hidden from the world.
-
-			Go here to learn more about src and dist:
-				https://stackoverflow.com/questions/23730882/what-is-the-role-of-src-and-dist-folders
-			Or here for detailed instructions on setting up the gulp command line helper.
-				https://github.com/CreativeCircus/circus-starter
-
-			- Chris Silich
-		-->
 	</head>
 
 	<body>
@@ -61,7 +26,7 @@
 					iceland tousled bespoke. Microdosing squid.”
 				</p>
 				<div class="user">
-					<div>Corwin E.</div>
+					<div class="name">Corwin E.</div>
 					<div class="v-user">Verified User</div>
 					<div class="verified-img">
 						<img class="corwin" src="/src/img/corwin.svg" alt="Corwin">
@@ -70,6 +35,13 @@
 			</section>
 
 			<section class="verified-user user-two">
+				<div class="user">
+					<div>Jessi U.</div>
+					<div class="v-user">Verified User</div>
+					<div class="verified-img">
+						<img class="corwin" src="/src/img/jessi.svg" alt="Corwin">
+					</div>
+				</div>
 				<p class="quote">
 					“I like Shelly’s Web Dev class more and more each day because it
 					makes my life a lot easier. Absolutely wonderful! We have no
@@ -84,13 +56,7 @@
 					PBR&B. Hexagon helvetica fashion axe, kale chips ramps cred
 					meditation messenger bag poke.
 				</p>
-				<div class="user">
-					<div>Jessi U.</div>
-					<div class="v-user">Verified User</div>
-					<div class="verified-img">
-						<img class="corwin" src="/src/img/jessi.svg" alt="Corwin">
-					</div>
-				</div>
+				
 			</section>
 
 			<section class="verified-user user-three">
@@ -113,6 +79,13 @@
 			</section>
 
 			<section class="verified-user user-four">
+				<div class="user">
+					<div>Kiele W.</div>
+					<div class="v-user">Verified User</div>
+					<div class="verified-img">
+						<img class="corwin" src="/src/img/kiele.svg" alt="Corwin">
+					</div>
+				</div>
 				<p class="quote">
 					“The best on the net! I use Shelly’s Web Dev class often.
 					We’ve seen amazing results already.
@@ -128,16 +101,17 @@
 					tote bag viral wayfarers post-ironic hoodie street art
 					kickstarter.”
 				</p>
-				<div class="user">
-					<div>Kiele W.</div>
-					<div class="v-user">Verified User</div>
-					<div class="verified-img">
-						<img class="corwin" src="/src/img/kiele.svg" alt="Corwin">
-					</div>
-				</div>
+				
 			</section>
 
 			<section class="verified-user user-five">
+				<div class="user">
+					<div>Lucila V.</div>
+					<div class="v-user">Verified User</div>
+					<div class="verified-img">
+						<img class="corwin" src="/src/img/lucila.svg" alt="Corwin">
+					</div>
+				</div>
 				<p class="quote">
 					“Shelly’s Web Dev class has really helped our business.”
 				</p>
@@ -149,159 +123,15 @@
 					carry distillery meditation fingerstache pabst butcher tilde.
 					Health goth marfa twee hammock pickled snackwave enamel pin
 					artisan small batch asymmetrical wayfarers tbh meggings.
-				</p>
-				<p class="paragraph">
+					<br>
+					<br>
 					Taxidermy vaporware la croix vinyl, pok pok everyday carry pug
 					sustainable plaid. Tbh craft beer coloring book shabby chic
 					kinfolk ethical DIY four loko XOXO iPhone pinterest vinyl
 					beard. Truffaut skateboard.”
 				</p>
-				<div class="user">
-					<div>Lucila V.</div>
-					<div class="v-user">Verified User</div>
-					<div class="verified-img">
-						<img class="corwin" src="/src/img/lucila.svg" alt="Corwin">
-					</div>
-				</div>
+				
 			</section>
-
-
-
-
-
-
-
-
-
-
-
-
-			<!-- <section class="verified-user verified-user-one">
-				<div class="amazing">
-					<div class="quotes">
-						<p>“It’s just amazing. Shelly’s Web Dev class
-							is worth a fortune to me.”
-						</p>
-					</div>
-					<div class="sub-quotes">
-						<p>
-						</p>
-					</div>
-					<div class="user">
-						<div>Corwin E.</div>
-						<div class="v-user">Verified User</div>
-						<div class="verified-img">
-							<img class="corwin" src="/src/img/corwin.svg" alt="Corwin">
-						</div>
-					</div>					
-				</div>
-			</section>
-			<section class="verified-user verified-user-two">
-				<div class="wonderful">
-					<div class="user">
-						<div class="verified-img">
-							<img class="jessi" src="/src/img/jessi.svg" alt="Jessi">
-						</div>
-						<div>Jessi U.</div>
-						<div class="v-user">Verified User</div>
-					</div>	
-					<div class="quotes">
-						<p>“I like Shelly’s Web Dev class more and more each day because it
-							makes my life a lot easier. Absolutely wonderful! We have no
-							regrets!”
-						</p>
-					</div>
-					<div class="sub-quotes">
-						<p>“Baby synth literally authentic beard, poutine semiotics
-							humblebrag jean shorts tumblr iceland schlitz narwhal shabby
-							chic before they sold out prism. Echo park hexagon disrupt
-							asymmetrical kombucha sriracha iceland cornhole schlitz.
-							Twee adaptogen flexitarian intelligentsia messenger bag retro
-							PBR&B. Hexagon helvetica fashion axe, kale chips ramps cred
-							meditation messenger bag poke.
-						</p>
-					</div>	
-				</div>
-			</section>
-			<section class="verified-user verified-user-three">
-				<div class="purchase">
-					<div class="quotes">
-						<p>“I made back the purchase price in just 48 hours!”</p>
-					</div>
-					<div class="sub-quotes">
-						<p>“Sartorial intelligentsia chambray hell of hammock four loko
-							before they sold out 3 wolf moon farm-to-table.
-							Edison bulb pabst single-origin coffee vinyl.
-							Adaptogen literally taxidermy.”
-						</p>
-					</div>
-					<div class="user">
-						<div>Marcio H.</div>
-						<div class="v-user">Verified User</div>
-						<div class="verified-img">
-							<img class="marcio" src="/src/img/marcio.svg" alt="Marcio">
-						</div>
-					</div>					
-				</div>
-			</section>
-			<section class="verified-user verified-user-four">
-				<div class="net">
-					<div class="user">
-						<div class="verified-img">
-							<img class="kiele" src="/src/img/kiele.svg" alt="Kiele">
-						</div>
-						<div>Kiele W.</div>
-						<div class="v-user">Verified User</div>
-					</div>
-					<div class="quotes">
-						<p>“The best on the net! I use Shelly’s Web Dev class often.
-							We’ve seen amazing results already.
-							I am completely blown away.”
-						</p>
-					</div>
-					<div class="sub-quotes">
-						<p>“Hoodie readymade small batch, austin tacos pug shoreditch la
-							croix YOLO vice ramps vexillologist. Wayfarers chambray bicycle
-							rights street art pour-over literally meggings jianbing blue
-							bottle gochujang iceland fanny pack. Authentic banh mi green
-							juice, pork belly crucifix tousled mlkshk. Shaman irony
-							thundercats roof party street art austin typewriter enamel pin
-							tote bag viral wayfarers post-ironic hoodie street art
-							kickstarter.”
-						</p>
-					</div>		
-				</div>
-			</section>
-			<section class="verified-user verified-user-five">
-				<div class="business">
-					<div class="user">
-						<div>Lucila V.</div>
-						<div class="v-user">Verified User</div>
-						<div class="verified-img">
-							<img class="lucila" src="/src/img/lucila.svg" alt="Lucila">
-						</div>
-					</div>
-					<div class="quotes">
-						<p>“Shelly’s Web Dev class has really helped our business.”</p>
-					</div>
-					<div class="sub-quotes">
-						<p>“Actually hell of edison bulb chillwave adaptogen migas,
-							asymmetrical ramps blog master cleanse freegan etsy PBR&B.
-							Hammock tumeric kickstarter fingerstache next level health
-							goth letterpress messenger bag taxidermy keytar. Everyday
-							carry distillery meditation fingerstache pabst butcher tilde.
-							Health goth marfa twee hammock pickled snackwave enamel pin
-							artisan small batch asymmetrical wayfarers tbh meggings.
-						</p>
-						<p class="paragraph">
-							Taxidermy vaporware la croix vinyl, pok pok everyday carry pug
-							sustainable plaid. Tbh craft beer coloring book shabby chic
-							kinfolk ethical DIY four loko XOXO iPhone pinterest vinyl
-							beard. Truffaut skateboard.”
-						</p>
-					</div>
-				</div>
-			</section> -->
 		</div>
 
 		<script src="dist/js/main.js"></script>
